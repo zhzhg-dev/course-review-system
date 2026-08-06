@@ -1,0 +1,16 @@
+# MongoDB for local development.
+services:
+  mongodb:
+    image: mongo:7
+    container_name: powerup-mongodb
+    restart: unless-stopped
+    ports:
+      # Expose MongoDB on localhost:27017 for backend and MongoDB Compass.
+      - "27017:27017"
+    volumes:
+      # Persist database files between container restarts.
+      - powerup-mongo-data:/data/db
+
+volumes:
+  powerup-mongo-data:
+
