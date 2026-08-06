@@ -1,0 +1,27 @@
+{
+  "name": "course-review-system",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "test"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "local:backend": "cd backend && npm run local",
+    "local:backend:windows": "cd backend && npm run local:windows",
+    "local:backend:mac": "cd backend && npm run local:mac",
+    "production:backend": "cd backend && npm run production",
+    "seed:courses": "cd backend && npm run seed:courses",
+    "seed:discussion": "cd backend && npm run seed:discussion",
+    "seed:all": "cd backend && npm run seed:all",
+    "seed:cloud": "cd backend && npm run seed:cloud",
+    "test:backend": "npm test --workspace backend",
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "preview": "npm run preview --workspace frontend"
+  }
+}
+
